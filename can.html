@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="can.css">
+    <title>canteen</title>
+</head>
+<body>
+    <div class="c">
+        <h1>Welcome to the Canteen</h1>
+        <p>Order your favorite food items below:</p>
+    <h1>Menu</h1>
+
+    <label>idli-vada-Rs.20</label>
+    <input type="number" placeholder="Enter quantity" id="idli">
+   <br> 
+    <label>palao-Rs.15</label>
+    <input type="number" placeholder="Enter quantity" id="palao">
+    <br>
+    <label>masala dosa-Rs.45</label>
+    <input type="number" placeholder="Enter quantity" id="dosa">
+    <br>
+    <label>puri-Rs.10</label>
+    <input type="number" placeholder="Enter quantity" id="puri">    
+    <br>
+    <label>tea-Rs.5</label>
+    <input type="number" placeholder="Enter quantity" id="tea"> 
+    <br>
+    <label>coffee-Rs.10</label>
+    <input type="number" placeholder="Enter quantity" id="coffee">
+    <br>
+
+    <button onclick="Total()">Calculate Total</button>
+     <p >We hope you enjoy your meal.</p>
+</div>
+  
+    <script>
+        function Total() {
+            var idli = document.getElementById("idli").value;
+            var dosa = document.getElementById("dosa").value;
+            var palao = document.getElementById("palao").value;
+            var puri = document.getElementById("puri").value;
+            var tea = document.getElementById("tea").value;
+            var coffee = document.getElementById("coffee").value;
+
+        var total = (idli * 20) + (dosa * 45) + (palao * 15) + (puri * 10) + (tea * 5) + (coffee * 10);
+            alert("Total amount is Rs." + total
+                + "\nThank you for ordering!"
+            );
+        }
+    </script>
+
+</body>
+</html>

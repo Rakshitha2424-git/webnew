@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cal.css">
+    <title>calculator</title>
+
+</head>
+<body>
+
+    
+   <div class="cal">
+
+  <marquee><h1>Result Predictor</h1></marquee>  
+
+     <label>Name: </label>
+
+    <input type="text"  id="name" placeholder="Enter your name">
+
+    <button onclick="per()">Check Your Result</button> 
+    <p id="res">Result</p>
+
+</div>
+   
+    <script>
+        function per()
+        {
+            var name = document.getElementById("name").value;
+            var per= Math.random()*100;
+            var res = document.getElementById("res");
+            res.innerHTML=" The result is "+ per;
+        }
+    </script>  
+
+</body>
+</html>
